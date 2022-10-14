@@ -36,7 +36,7 @@
             </p>
         </div>
         <div>
-            <table border="0px" style="width: 100%" ;>
+             <table border="0px" style="width: 100%" ;>
                 <tr style="background-color: #668fe0" ;>
                     <th>Year
                         <select>
@@ -57,28 +57,144 @@
 
                 </tr>
                 <tr>
+                    <th>Slot 0</th>
+                    <th>-</th>
+                    <th>-</th>
+                    <th>-</th>
+                    <th>-</th>
+                    <th>-</th>
+                    <th>-</th>
+                    <th>-</th>
+                </tr>
+                <tr>
                     <th>Slot 1</th>
+                    <th>-</th>
+                    <th>-</th>
+                    <th>-</th>
+                    <th>-</th>
+                    <th>-</th>
+                    <th>-</th>
+                    <th>-</th>
                 </tr>
                 <tr>
                     <th>Slot 2</th>
+                    <th>-</th>
+                    <th>-</th>
+                    <th>-</th>
+                    <th>-</th>
+                    <th>-</th>
+                    <th>-</th>
+                    <th>-</th>
                 </tr>
                 <tr>
                     <th>Slot 3</th>
+                    <th>-</th>
+                    <th>-</th>
+                    <th>-</th>
+                    <th>-</th>
+                    <th>-</th>
+                    <th>-</th>
+                    <th>-</th>
                 </tr>
                 <tr>
                     <th>Slot 4</th>
+                    <th>-</th>
+                    <th>-</th>
+                    <th>-</th>
+                    <th>-</th>
+                    <th>-</th>
+                    <th>-</th>
+                    <th>-</th>
                 </tr>
                 <tr>
                     <th>Slot 5</th>
+                    <th>
+                        <a href="#">PRJ301-</a>
+                        <a style="background-color: #f0ab49; color: #ffffff;" href="#">View Materials</a> <br> at DE-C203
+                        <a>
+                            <br>(<font color="green">attended</font>)
+                        </a>
+                    </th>
+                    <th>-</th>
+                    <th>
+                        <a href="#">PRJ301-</a>
+                        <a style="background-color: #f0ab49; color: #ffffff;" href="#">View Materials</a> <br> at DE-C203
+                        <a>
+                            <br>(<font color="green">attended</font>)
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#">JPD123-</a>
+                        <a style="background-color: #f0ab49; color: #ffffff;" href="#">View Materials</a> <br> at DE-C301
+                        <a>
+                            <br>(<font color="green">attended</font>)
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#">PRJ301-</a>
+                        <a style="background-color: #f0ab49; color: #ffffff;" href="#">View Materials</a> <br> at DE-C203
+                        <a>
+                            <br>(<font color="green">attended</font>)
+                        </a>
+                    </th>
+                    <th>-</th>
+                    <th>-</th>
                 </tr>
                 <tr>
                     <th>Slot 6</th>
+                    <th>
+                        <a href="#">MAS291-</a>
+                        <a style="background-color: #f0ab49; color: #ffffff;" href="#">View Materials</a> <br> at DE-C203
+                        <a>
+                            <br>(<font color="green">attended</font>)
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#">JPD123-</a>
+                        <a style="background-color: #f0ab49; color: #ffffff;" href="#">View Materials</a> <br> at DE-C301
+                        <a>
+                            <br>(<font color="green">attended</font>)
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#">MAS291-</a>
+                        <a style="background-color: #f0ab49; color: #ffffff;" href="#">View Materials</a> <br> at DE-C203
+                        <a>
+                            <br>(<font color="red">absent</font>)
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#">JPD123-</a>
+                        <a style="background-color: #f0ab49; color: #ffffff;" href="#">View Materials</a> <br> at DE-C301
+                        <a>
+                            <br>(<font color="green">attended</font>)
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#">MAS291-</a>
+                        <a style="background-color: #f0ab49; color: #ffffff;" href="#">View Materials</a> <br> at DE-C203
+                        <a>
+                            <br>(<font color="green">attended</font>)
+                        </a>
+                    </th>
+                    <th>-</th>
+                    <th>-</th>
                 </tr>
                 <tr>
                     <th>Slot 7</th>
+                    <th>-</th>
+                    <th>-</th>
+                    <th>-</th>
+                    <th>-</th>
+                    <th>-</th>
                 </tr>
                 <tr>
                     <th>Slot 8</th>
+                    <th>-</th>
+                    <th>-</th>
+                    <th>-</th>
+                    <th>-</th>
+                    <th>-</th>
                 </tr>
             </table>
         </div>
