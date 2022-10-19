@@ -27,6 +27,6 @@ public class view extends HttpServlet{
         processRequest(req, resp);
     }
     void processRequest(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("../view/ViewSchedule.jsp").forward(req, resp);
+        req.getRequestDispatcher("/View_Background/ViewSchedule.jsp").forward(req, resp);
     }
 }
