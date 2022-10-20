@@ -2,18 +2,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Model;
+package model.assignment;
 
 import java.util.ArrayList;
 
 /**
  *
- * @author win
+ * @author Ngo Tung Son
  */
-public class Subject {
+public class Room {
     private int id;
     private String name;
-    private ArrayList<Group> groups = new ArrayList<>();
+    private ArrayList<Session> sessions = new ArrayList<>();
 
     public int getId() {
         return id;
@@ -31,11 +31,12 @@ public class Subject {
         this.name = name;
     }
 
-    public ArrayList<Group> getGroups() {
-        return groups;
+    public ArrayList<Session> getSessions() {
+        return sessions;
     }
 
-    public void setGroups(ArrayList<Group> groups) {
-        this.groups = groups;
+    public void setSessions(ArrayList<Session> sessions) {
+        this.sessions = sessions;
     }
+    
 }

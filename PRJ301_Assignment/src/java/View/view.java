@@ -4,13 +4,13 @@
  */
 package View;
 
-import Dal.assignment.LecturerDBContext;
-import Dal.assignment.SessionDBContext;
-import Dal.assignment.TimeSlotDBContext;
-import Model.Lecturer;
-import Model.Session;
-import Model.TimeSlot;
+import model.assignment.Lecturer;
+import model.assignment.Session;
+import model.assignment.TimeSlot;
 import Util.DateTimeHelper;
+import dal.assignment.LecturerDBContext;
+import dal.assignment.SessionDBContext;
+import dal.assignment.TimeSlotDBContext;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;

@@ -2,17 +2,17 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Model;
+package model.assignment;
 
 import java.sql.Date;
 import java.util.ArrayList;
 
 /**
  *
- * @author win
+ * @author Ngo Tung Son
  */
 public class Session {
-     private int id;
+    private int id;
     private Lecturer lecturer;
     private Room room;
     private TimeSlot timeslot;

@@ -2,23 +2,22 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Dal.assignment;
+package dal.assignment;
 
 import Dal.DBContext;
-import Model.Lecturer;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import model.assignment.Lecturer;
 
 /**
  *
- * @author win
+ * @author Ngo Tung Son
  */
-public class LecturerDBContext extends DBContext<Lecturer>{
-    
+public class LecturerDBContext extends DBContext<Lecturer> {
 
     @Override
     public void insert(Lecturer model) {
@@ -34,7 +33,7 @@ public class LecturerDBContext extends DBContext<Lecturer>{
     public void delete(Lecturer model) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
-    
+
     @Override
     public Lecturer get(int id) {
         try {

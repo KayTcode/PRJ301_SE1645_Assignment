@@ -2,20 +2,20 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Dal.assignment;
+package dal.assignment;
 
 import Dal.DBContext;
-import Model.TimeSlot;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import model.assignment.TimeSlot;
 
 /**
  *
- * @author win
+ * @author Ngo Tung Son
  */
 public class TimeSlotDBContext extends DBContext<TimeSlot> {
 
@@ -46,16 +46,18 @@ public class TimeSlotDBContext extends DBContext<TimeSlot> {
             String sql = "SELECT tid,[description] FROM TimeSlot";
             PreparedStatement stm = connection.prepareStatement(sql);
             ResultSet rs = stm.executeQuery();
-            while (rs.next()) {
+            while(rs.next())
+            {
                 TimeSlot slot = new TimeSlot();
                 slot.setId(rs.getInt("tid"));
                 slot.setDescription(rs.getString("description"));
                 slots.add(slot);
             }
-
+            
         } catch (SQLException ex) {
             Logger.getLogger(TimeSlotDBContext.class.getName()).log(Level.SEVERE, null, ex);
         }
         return slots;
     }
+    
 }

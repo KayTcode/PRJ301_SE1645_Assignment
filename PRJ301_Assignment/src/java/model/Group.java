@@ -2,13 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Model;
+package model.assignment;
 
 import java.util.ArrayList;
 
 /**
  *
- * @author win
+ * @author Ngo Tung Son
  */
 public class Group {
     private int id;
@@ -56,4 +56,5 @@ public class Group {
     public void setSupervisor(Lecturer supervisor) {
         this.supervisor = supervisor;
     }
+    
 }

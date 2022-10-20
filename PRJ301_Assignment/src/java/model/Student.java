@@ -2,16 +2,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Model;
+package model.assignment;
 
 import java.util.ArrayList;
 
 /**
  *
- * @author win
+ * @author Ngo Tung Son
  */
 public class Student {
-     private int id;
+    private int id;
     private String name;
     private ArrayList<Group> groups = new ArrayList<>();
     private ArrayList<Attandance> attandances = new ArrayList<>();
@@ -47,4 +47,5 @@ public class Student {
     public void setAttandances(ArrayList<Attandance> attandances) {
         this.attandances = attandances;
     }
+    
 }

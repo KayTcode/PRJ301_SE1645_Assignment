@@ -2,14 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Dal.assignment;
+package dal.assignment;
+
 import Dal.DBContext;
-import Model.Group;
-import Model.Lecturer;
-import Model.Room;
-import Model.Session;
-import Model.Subject;
-import Model.TimeSlot;
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -17,12 +12,19 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import model.assignment.Group;
+import model.assignment.Lecturer;
+import model.assignment.Room;
+import model.assignment.Session;
+import model.assignment.Subject;
+import model.assignment.TimeSlot;
 
 /**
  *
- * @author win
+ * @author Ngo Tung Son
  */
-public class SessionDBContext extends DBContext<Session>{
+public class SessionDBContext extends DBContext<Session> {
+
     public ArrayList<Session> filter(int lid, Date from, Date to) {
         ArrayList<Session> sessions = new ArrayList<>();
         try {
@@ -115,5 +117,4 @@ public class SessionDBContext extends DBContext<Session>{
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
-    
 }
