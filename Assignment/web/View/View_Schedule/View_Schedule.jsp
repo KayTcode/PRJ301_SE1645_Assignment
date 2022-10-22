@@ -1,6 +1,6 @@
 <%-- 
-    Document   : ViewSchedule
-    Created on : Oct 14, 2022, 2:12:12 PM
+    Document   : View_Schedule
+    Created on : Oct 22, 2022, 8:47:35 PM
     Author     : win
 --%>
 
@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>View Schedule</title>
+        <title>JSP Page</title>
     </head>
     <body>
          <h1>FPT University Hoa Lac</h1>
