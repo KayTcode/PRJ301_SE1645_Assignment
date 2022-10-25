@@ -2,15 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package View;
+package Controller;
 
-import model.assignment.Lecturer;
-import model.assignment.Session;
-import model.assignment.TimeSlot;
 import Util.DateTimeHelper;
-import dal.assignment.LecturerDBContext;
-import dal.assignment.SessionDBContext;
-import dal.assignment.TimeSlotDBContext;
+import dal.LecturerDBContext;
+import dal.SessionDBContext;
+import dal.TimeSlotDBContext;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -18,25 +15,28 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
+import model.assignment.Lecturer;
+import model.assignment.Session;
+import model.assignment.TimeSlot;
 
 /**
  *
  * @author win
  */
-public class view extends HttpServlet{
+public class TimeTableController extends HttpServlet{
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-      processRequest(req, resp);
+        processRequest(req, resp);
     }
-
-   
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         processRequest(req, resp);
     }
-    void processRequest(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        int lid = Integer.parseInt(req.getParameter("lid"));
+     protected void processRequest(HttpServletRequest req, HttpServletResponse resq)
+    throws ServletException, IOException {
+         int lid = Integer.parseInt(req.getParameter("lid"));
         String raw_from = req.getParameter("from");
         String raw_to = req.getParameter("to");
         java.sql.Date from = null;
@@ -72,6 +72,8 @@ public class view extends HttpServlet{
         Lecturer lecturer = lecDB.get(lid);
         req.setAttribute("lecturer", lecturer);
         
-        req.getRequestDispatcher("/View_Background/ViewSchedule.jsp").forward(req, resp);
-    }
+        req.getRequestDispatcher("../View_Background/ViewSchedule.jsp").forward(req, resq);
+        
+     }
+    
 }
