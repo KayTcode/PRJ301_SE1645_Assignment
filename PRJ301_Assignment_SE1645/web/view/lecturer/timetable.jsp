@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="/CSS/Styleindex.css">
     </head>
     <body>
+        <div class="Content">
         Campus: 
         <select>
             <option>
@@ -29,22 +30,23 @@
             To: <input type="date" name="to" value="${requestScope.to}"/>
             <input type="submit" value="View"/> 
         </form>
-            <table class="TimeTable" border="0px" style="width: 100%;">
-                
+            </div>
+        <table class="TimeTable" border="0px" style="width: 100%;">
+
             <tr>
                 <th style="background-color: #6b90da">Slot</th>
-                <c:forEach items="${requestScope.dates}" var="d">
-                <th style="background-color: #6b90da">${helper.getDayNameofWeek(d)} <br>${d}</th>
+                    <c:forEach items="${requestScope.dates}" var="d">
+                    <th style="background-color: #6b90da">${helper.getDayNameofWeek(d)} <br>${d}</th>
                     </c:forEach>
             </tr>
             <c:forEach items="${requestScope.slots}" var="slot">
-                <tr>
+                <tr style="background: beige">
                     <td >Slot ${slot.id}</td>
                     <c:forEach items="${requestScope.dates}" var="d">
                         <td>
                             <c:forEach items="${requestScope.sessions}" var="ses">
                                 <c:if test="${helper.compare(ses.date,d) eq 0 and (ses.timeslot.id eq slot.id)}">
-                                    <a href="att?id=${ses.id}">${ses.group.name}</a>
+                                    <a id="namesubject" href="att?id=${ses.id}">${ses.group.name}</a>
                                     <br/>
                                     at ${ses.room.name}
                                     <c:if test="${ses.attandated}">
@@ -56,7 +58,9 @@
                                         <p id="timeslot">(${slot.description})</p>
                                     </c:if>
                                 </c:if>
-                                  
+                                <c:if test="${helper.compare(ses.date,d) ne 0 and (ses.timeslot.id eq slot.id)}" >
+                                    <p>-</p>
+                                </c:if>
                             </c:forEach>
                         </td>
                     </c:forEach>
