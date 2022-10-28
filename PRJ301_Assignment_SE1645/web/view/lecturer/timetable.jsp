@@ -1,4 +1,3 @@
-
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <jsp:useBean id="helper" class="util.DateTimeHelper"/>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -11,21 +10,21 @@
     </head>
     <body>
         <div class="Content">
-        Campus: 
-        <select>
-            <option>
-                FU-HL
-            </option>
-        </select><br>
-        Lecturer: <input type="text" readonly="readonly" value="${requestScope.lecturer.name}"/>
-        <form action="timetable" method="GET">
-            <input type="hidden" name="lid" value="${param.lid}"/>
-            Date:
-            From: <input type="date" name="from" value="${requestScope.from}"/>
-            To: <input type="date" name="to" value="${requestScope.to}"/>
-            <input type="submit" value="View"/> 
-        </form>
-            </div>
+            Campus: 
+            <select>
+                <option>
+                    FU-HL
+                </option>
+            </select><br>
+            Lecturer: <input type="text" readonly="readonly" value="${requestScope.lecturer.name}"/>
+            <form action="timetable" method="GET">
+                <input type="hidden" name="lid" value="${param.lid}"/>
+                Date:
+                From: <input type="date" name="from" value="${requestScope.from}"/>
+                To: <input type="date" name="to" value="${requestScope.to}"/>
+                <input type="submit" value="View"/> 
+            </form>
+        </div>
         <table class="TimeTable" border="0px" style="width: 100%;">
 
             <tr>
