@@ -17,7 +17,7 @@ import java.util.Date;
 public class DateTimeHelper {
 
     public static Date toDate(String value, String format) throws ParseException {
-        return new SimpleDateFormat("dd/MM/yyyy").parse(value);
+        return new SimpleDateFormat(format).parse(value);
     }
 
     public static Date removeTime(Date date) {
