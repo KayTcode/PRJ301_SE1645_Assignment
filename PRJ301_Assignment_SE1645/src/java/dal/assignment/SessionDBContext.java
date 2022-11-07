@@ -61,7 +61,7 @@ public class SessionDBContext extends dal.DBContext<Session> {
                 session.setId(rs.getInt("sesid"));
                 session.setDate(rs.getDate("date"));
                 session.setIndex(rs.getInt("index"));
-                session.setAttanded(rs.getBoolean("attanded"));
+                session.setAttandated(rs.getBoolean("attanded"));
                 
                 l.setId(rs.getInt("lid"));
                 l.setName(rs.getString("lname"));
@@ -81,7 +81,7 @@ public class SessionDBContext extends dal.DBContext<Session> {
                 
                 t.setId(rs.getInt("tid"));
                 t.setDescription(rs.getString("description"));
-                session.setSlot(t);
+                session.setTimeslot(t);
                 
                 sessions.add(session);
             }
