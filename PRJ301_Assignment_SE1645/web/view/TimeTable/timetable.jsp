@@ -6,7 +6,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>View Schedule</title>
-        <link rel="stylesheet" href="/CSS/Styleindex.css">
+        
     </head>
     <body>
         <div class="Content">
@@ -28,7 +28,7 @@
         <table class="TimeTable" border="0px" style="width: 100%;">
 
             <tr>
-                <th style="background-color: #6b90da">Slot</th>
+                <th style="background-color:#6b90da">Slot</th>
                     <c:forEach items="${requestScope.dates}" var="d">
                     <th style="background-color: #6b90da">${helper.getDayNameofWeek(d)} <br>${d}</th>
                     </c:forEach>

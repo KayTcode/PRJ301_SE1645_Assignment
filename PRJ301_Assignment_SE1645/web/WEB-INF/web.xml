@@ -10,7 +10,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>attservlet</servlet-name>
-        <url-pattern>/takeatt</url-pattern>
+        <url-pattern>/att</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>LecturerTimetableController</servlet-name>
