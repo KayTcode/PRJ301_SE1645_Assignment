@@ -1,6 +1,6 @@
 <%-- 
     Document   : login
-    Created on : Oct 17, 2022, 3:08:08 PM
+    Created on : Nov 8, 2022, 10:11:53 PM
     Author     : win
 --%>
 
@@ -12,10 +12,11 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <form action="login" method="POST">
-            Username: <input type="text" name="username" /> <br/>
-            Password: <input type="password" name="password" /> <br/>
-            <input type="submit" value="Login"/>
+        <h1>Login</h1>
+        <form action="login" method="post">
+            Username:<input type="text" name="username"/><br/>
+            Password:<input type="text" name="password"><br/> 
+            <input type="submit" name="Login"/>
         </form>
     </body>
 </html>

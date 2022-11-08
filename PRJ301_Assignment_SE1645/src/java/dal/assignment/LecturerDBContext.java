@@ -1,9 +1,11 @@
+package dal.assignment;
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package dal.assignment;
 
+
+import dal.DBContext;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -12,8 +14,11 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import model.Lecturer;
 
-
-public class LecturerDBContext extends dal.DBContext<Lecturer> {
+/**
+ *
+ * @author x
+ */
+public class LecturerDBContext extends DBContext<Lecturer> {
 
     @Override
     public void insert(Lecturer model) {
@@ -37,8 +42,7 @@ public class LecturerDBContext extends dal.DBContext<Lecturer> {
             PreparedStatement stm = connection.prepareStatement(sql);
             stm.setInt(1, id);
             ResultSet rs = stm.executeQuery();
-            if(rs.next())
-            {
+            if(rs.next()){
                 Lecturer l = new Lecturer();
                 l.setId(rs.getInt("lid"));
                 l.setName(rs.getString("lname"));

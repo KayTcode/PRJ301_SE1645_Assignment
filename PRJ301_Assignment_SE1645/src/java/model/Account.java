@@ -10,6 +10,15 @@ public class Account {
     private String password;
     private String displayname;
 
+    public Account() {
+    }
+
+    public Account(String username, String password, String displayname) {
+        this.username = username;
+        this.password = password;
+        this.displayname = displayname;
+    }
+
     public String getUsername() {
         return username;
     }
