@@ -19,10 +19,6 @@ import model.Session;
 import model.TimeSlot;
 import util.DateTimeHelper;
 
-/**
- *
- * @author Hello Ngo Tung Son handsome
- */
 public class TimetableController extends HttpServlet {
 
     /**

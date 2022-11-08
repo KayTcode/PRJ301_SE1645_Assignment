@@ -6,10 +6,7 @@ package model;
 
 import java.util.Date;
 
-/**
- *
- * @author Ngo Tung Son
- */
+
 public class Attandance {
     private int id;
     private Session session;

@@ -7,10 +7,7 @@ package model;
 import java.sql.Date;
 import java.util.ArrayList;
 
-/**
- *
- * @author Ngo Tung Son
- */
+
 public class Session {
     private int id;
     private Lecturer lecturer;

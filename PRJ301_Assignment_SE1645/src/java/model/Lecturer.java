@@ -6,10 +6,7 @@ package model;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author Ngo Tung Son
- */
+
 public class Lecturer {
     private int id;
     private String name;

@@ -14,10 +14,7 @@ import model.Attandance;
 import model.Session;
 import model.Student;
 
-/**
- *
- * @author win
- */
+
 public class AttandanceController extends HttpServlet {
 
     @Override

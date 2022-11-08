@@ -26,6 +26,7 @@
                 list-style: none;
                 background-color: #f5f5f5;
                 border-radius: 4px;
+                text-decoration: none;
             }
             .TimeTable{
                 width: 100%;
@@ -59,8 +60,8 @@
         </style>
     </head>
     <body>
-        <div class="row">
-            <h1 class="col-md-8">
+        <div>
+            <h1>
                 <span style="box-sizing: border-box">FPT University Academic Portal</span>
             </h1>
         </div>
@@ -68,9 +69,9 @@
             <ol class="breadcrumb">
                 <li>
                     <span>
-                        <a style="color: ">Home</a>
+                        <a href="#"  style="text-decoration: none;">Home</a>
                         &nbsp; | &nbsp;
-                        <b>Time Table</b>
+                        <a>Time Table</a>
                     </span>
                 </li>
             </ol>

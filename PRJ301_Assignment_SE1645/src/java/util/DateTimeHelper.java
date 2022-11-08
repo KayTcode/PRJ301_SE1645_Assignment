@@ -10,10 +10,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
-/**
- *
- * @author Ngo Tung Son
- */
+
 public class DateTimeHelper {
 
     public static Date toDate(String value, String format) throws ParseException {
