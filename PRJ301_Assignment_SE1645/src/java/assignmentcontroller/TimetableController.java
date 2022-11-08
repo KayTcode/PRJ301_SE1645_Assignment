@@ -14,6 +14,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
 import java.util.Date;
+import model.Account;
 import model.Lecturer;
 import model.Session;
 import model.TimeSlot;
@@ -34,7 +35,8 @@ public class TimetableController extends HttpServlet {
             throws ServletException, IOException {
         int lid;
         try {
-            lid = Integer.parseInt(request.getParameter("lid"));
+//            lid = Integer.parseInt(request.getParameter("lid"));
+          Account account = (Account) request.getSession().getAttribute("account");
             String raw_from = request.getParameter("from");
             String raw_to = request.getParameter("to");
             java.sql.Date from = null;
@@ -60,12 +62,12 @@ public class TimetableController extends HttpServlet {
             request.setAttribute("slots", slots);
 
             SessionDBContext sesDB = new SessionDBContext();
-            ArrayList<Session> sessions = sesDB.filter(lid, from, to);
+            ArrayList<Session> sessions = sesDB.filter(account.getUsername(), from, to);
             request.setAttribute("sessions", sessions);
 
-            LecturerDBContext lecDB = new LecturerDBContext();
-            Lecturer lecturer = lecDB.get(lid);
-            request.setAttribute("lecturer", lecturer);
+//            LecturerDBContext lecDB = new LecturerDBContext();
+//            Lecturer lecturer = lecDB.get(lid);
+//            request.setAttribute("lecturer", lecturer);
         } catch (Exception e) {
         }
 

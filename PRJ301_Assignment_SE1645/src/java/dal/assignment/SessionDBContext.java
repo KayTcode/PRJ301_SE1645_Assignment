@@ -11,6 +11,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import model.Account;
 import model.Attandance;
 import model.Group;
 import model.Lecturer;
@@ -20,31 +21,30 @@ import model.Student;
 import model.Subject;
 import model.TimeSlot;
 
-
 public class SessionDBContext extends dal.DBContext<Session> {
 
-    public ArrayList<Session> filter(int lid, Date from, Date to) {
+    public ArrayList<Session> filter(String username, Date from, Date to) {
         ArrayList<Session> sessions = new ArrayList<>();
         try {
-            String sql = "SELECT  \n"
-                    + "	ses.sesid,ses.[date],ses.[index],ses.attanded\n"
-                    + "	,l.lid,l.lname\n"
-                    + "	,g.gid,g.gname\n"
-                    + "	,sub.subid,sub.subname\n"
-                    + "	,r.rid,r.rname\n"
-                    + "	,t.tid,t.[description]\n"
-                    + "FROM [Session] ses \n"
-                    + "			INNER JOIN Lecturer l ON l.lid = ses.lid\n"
-                    + "			INNER JOIN [Group] g ON g.gid = ses.gid\n"
-                    + "			INNER JOIN [Subject] sub ON sub.subid = g.subid\n"
-                    + "			INNER JOIN Room r ON r.rid = ses.rid\n"
-                    + "			INNER JOIN TimeSlot t ON t.tid = ses.tid\n"
-                    + "WHERE\n"
-                    + "l.lid = ?\n"
-                    + "AND ses.[date] >= ?\n"
-                    + "AND ses.[date] <= ?";
+            String sql = "select   ses.sesid,ses.[date],ses.[index],ses.attanded,\n"
+                    + "                                                         l.lid,l.lname\n"
+                    + "                                                         	,g.gid,g.gname\n"
+                    + "                                                       	,sub.subid,sub.subname\n"
+                    + "                                                          	,r.rid,r.rname\n"
+                    + "                                                        	,t.tid,t.[description]\n"
+                    + "                                                      FROM [Session] ses \n"
+                    + "                                                         		INNER JOIN Lecturer l ON l.lid = ses.lid\n"
+                    + "                                                           		INNER JOIN Account a ON a.username = l.username\n"
+                    + "                                                            		INNER JOIN [Group] g ON g.gid = ses.gid\n"
+                    + "                                                           		INNER JOIN [Subject] sub ON sub.subid = g.subid\n"
+                    + "                                                  		        INNER JOIN Room r ON r.rid = ses.rid\n"
+                    + "                                                          		INNER JOIN TimeSlot t ON t.tid = ses.tid\n"
+                    + "                                                           WHERE\n"
+                    + "                                                     l.username = ?\n"
+                    + "                                                            AND ses.[date] >= ?\n"
+                    + "                                                                  AND ses.[date] <= ?";
             PreparedStatement stm = connection.prepareStatement(sql);
-            stm.setInt(1, lid);
+           stm.setString(1, username);
             stm.setDate(2, from);
             stm.setDate(3, to);
             ResultSet rs = stm.executeQuery();
@@ -65,7 +65,7 @@ public class SessionDBContext extends dal.DBContext<Session> {
                 l.setName(rs.getString("lname"));
                 session.setLecturer(l);
 
-                g.setId(rs.getInt("gid"));
+                 g.setId(rs.getInt("gid"));
                 g.setName(rs.getString("gname"));
                 session.setGroup(g);
 
@@ -281,4 +281,6 @@ public class SessionDBContext extends dal.DBContext<Session> {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
+//    public ArrayList<Session> filter(Account account, Date from, Date to) {
+//    }
 }
