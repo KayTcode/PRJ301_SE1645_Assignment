@@ -27,7 +27,7 @@ public abstract class BaseAuthenticationController extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         if(isAuthenticated(req))
         {
-            //do business
+            
             Account account = (Account)req.getSession().getAttribute("account");
             doPost(req, resp, account);
         }
@@ -41,7 +41,7 @@ public abstract class BaseAuthenticationController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 if(isAuthenticated(req))
         {
-            //do business
+            
             Account account = (Account)req.getSession().getAttribute("account");
             doGet(req, resp, account);
         }
