@@ -16,6 +16,7 @@
         <h1>Take attendance</h1>
         Attendance for ${requestScope.ses.group.subject.name} at slot ${requestScope.ses.timeslot.id} 
         on ${requestScope.ses.date} at room ${requestScope.ses.room.name}. This is the session number ${requestScope.ses.index} of the course
+        <br> Attended: <span style="color: red;"> ${requestScope.ses.attandated?"Yes":"No"} </span>
         <form action="att" method="POST">
             <input type="hidden" name="sesid" value="${param.id}"/>
             <table border="0px" style="width: 100%;">
