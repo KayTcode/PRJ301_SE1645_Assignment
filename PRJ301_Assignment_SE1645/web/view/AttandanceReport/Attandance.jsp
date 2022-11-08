@@ -13,21 +13,20 @@
         <title>Take Attendance</title>
     </head>
     <body>
-        Take attendance for Group: ${requestScope.ses.group.name} <br/>
-        Subject: ${requestScope.ses.group.subject.name} <br/>
-        Room: ${requestScope.ses.room.name} <br/>
-        Date: ${requestScope.ses.date} - ${requestScope.ses.timeslot.description}<br/>
-        Attended: <span style="color: red;"> ${requestScope.ses.attandated   ?"Yes":"No"} </span>
-        <form action="takeatt" method="POST">
+        <h1>Take attendance</h1>
+        Attendance for ${requestScope.ses.group.subject.name} at slot ${requestScope.ses.timeslot.id} 
+        on ${requestScope.ses.date} at room ${requestScope.ses.room.name}. This is the session number ${requestScope.ses.index} of the course
+        <form action="att" method="POST">
             <input type="hidden" name="sesid" value="${param.id}"/>
-            <table border="1px">
-                <tr>
+            <table border="0px" style="width: 100%;">
+                <tr style="background-color: #6b90da">
                     <td>No.</td>
                     <td>StudentID</td>
                     <td>Full Name</td>
                     <td>Present</td>
                     <td>Absent</td>
                     <td>Description</td>
+                    <td>Show Image</td>
                 </tr>
                 <c:forEach items="${requestScope.ses.attandances}" var="a" varStatus="loop">
                  <tr>
