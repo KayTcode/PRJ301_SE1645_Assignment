@@ -4,6 +4,8 @@
  */
 package model;
 
+import java.util.Date;
+
 /**
  *
  * @author Ngo Tung Son
@@ -14,6 +16,16 @@ public class Attandance {
     private Student student;
     private boolean present;
     private String description;
+    private Date record_time;
+
+    public Date getRecord_time() {
+        return record_time;
+    }
+
+    public void setRecord_time(Date record_time) {
+        this.record_time = record_time;
+    }
+    
 
     public int getId() {
         return id;

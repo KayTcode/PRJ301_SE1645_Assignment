@@ -26,7 +26,7 @@
                     <td>Present</td>
                     <td>Absent</td>
                     <td>Description</td>
-                    <td>Show Image</td>
+                    <td>Record Time</td>
                 </tr>
                 <c:forEach items="${requestScope.ses.attandances}" var="a" varStatus="loop">
                  <tr>
@@ -46,6 +46,7 @@
                                </c:if>
                                name="present${a.student.id}" value="absent" /></td>
                     <td><input type="text" name="description${a.student.id}" value="${a.description}" /></td>
+                    <td>${a.record_time}</td>
                 </tr>   
                     
                 </c:forEach>
